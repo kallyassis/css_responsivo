@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #FF1493;
+    padding: 20px 2%;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.Sobre-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Sobre-menu h1{
+    padding: 10px;
+    color: white;
+}
+
+.Sobre-menu ul{
+    list-style-type: none;
+    display: flex;
+}
+
+.Sobre-menu ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px
+}
+
+.logo-img img {
+    width: 20rem;
+    height: auto;
+    padding-bottom: 16px;
+}
+
+.sobre-loja .flex{
+    margin: 16px;
+    display: flex;
+    gap: 30px ;
+}
+
+.txt-sobre {
+    max-width: 500px;
+}
+
+.txt-sobre h2 {
+    color: #FF1493;
+    padding-bottom: 8px;
+    border-bottom: 2px solid;
+    font-style: italic;
+}
+
+.txt-sobre p {
+    padding-top: 16px;
+}
+
+.Produto .interface h2 {
+    color: #FF1493;
+    padding-bottom: 8px;
+    border-bottom: 2px solid;
+    margin-left: 15px;
+    font-style: italic;
+}
+
+.conteudo img {
+    width: 12rem;
+    height: auto;
+}
+
+.flex .produtos{
+    display: flex;
+}
+
+.conteudo{
+    padding: 50px 5%;
+    justify-content: space-between
+}
+
+.conteudo h3{
+    padding-top: 8px;
+}
+
+.conteudo p {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: justify;
+}
+
+.conteudo span{
+    font-weight: bold;
+}
+
+.tbn button{
+    background-color: #FF1493;
+    color: white;
+    padding: 10px 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin-top: 8px;
+} 
+
+.tbn button:hover{
+    background-color: #900750;
+}
+
+footer{
+    background-color: #FF1493;
+    color: white;
+    padding: 16px;
+}
+
+
+@media screen and (max-width:1024px) {
+    .sobre-loja .flex{
+        display: grid;
+    }
+
+
+    .flex .produtos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .conteudo{
+    max-width: 250px;
+    justify-content: center
+    }
+}
+
+
+
+@media screen and (max-width:767px) {
+    .sobre-loja .flex{
+        display: block;
+    }
+
+    .flex .produtos{
+        display: blo;
+    }
+
+    .logo-img img{
+        width: 20rem;
+        height: auto;
+        padding-bottom: 16px;
+    }
+}
