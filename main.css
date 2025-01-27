@@ -4,13 +4,17 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: rgba(128, 128, 128, 0.293);
+}
+
 header{
     background-color: #FF1493;
-    padding: 20px 2%;
+    padding: 5px;
 }
 
 .interface{
-    max-width: 1280px;
+    max-width: 1024px;
     margin: 0 auto;
 }
 
@@ -35,57 +39,51 @@ header{
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-    padding: 15px
+    padding: 8px
+}
+/* Estilo Cabeçalho */
+
+.img-column img {
+    width: 85%;
+    
 }
 
-.logo-img img {
-    width: 20rem;
-    height: auto;
-    padding-bottom: 16px;
-}
-
-.sobre-loja .flex{
-    margin: 16px;
-    display: flex;
-    gap: 30px ;
-}
-
-.txt-sobre {
-    max-width: 500px;
+.sobre-loja{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 30px;
 }
 
 .txt-sobre h2 {
     color: #FF1493;
     padding-bottom: 8px;
     border-bottom: 2px solid;
+    font-size: 28px;
     font-style: italic;
 }
 
 .txt-sobre p {
     padding-top: 16px;
+    text-align: justify;
 }
+/* Estilo Sobre-loja */
 
-.Produto .interface h2 {
+.interface > h2 {
     color: #FF1493;
-    padding-bottom: 8px;
     border-bottom: 2px solid;
-    margin-left: 15px;
+    font-size: 28px;
     font-style: italic;
+    margin: 30px;
 }
 
-.conteudo img {
-    width: 12rem;
-    height: auto;
+.produtos{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 30px;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 
-.flex .produtos{
-    display: flex;
-}
-
-.conteudo{
-    padding: 50px 5%;
-    justify-content: space-between
-}
 
 .conteudo h3{
     padding-top: 8px;
@@ -93,27 +91,33 @@ header{
 
 .conteudo p {
     padding-top: 8px;
-    padding-bottom: 8px;
     text-align: justify;
+    padding-bottom: 8px;
 }
 
 .conteudo span{
     font-weight: bold;
 }
 
-.tbn button{
+.tbn button {
     background-color: #FF1493;
     color: white;
     padding: 10px 10px;
     font-weight: bold;
     border: none;
     border-radius: 5px;
-    margin-top: 8px;
+    margin-top: 8px
 } 
+
+.tbn button {
+    width: 100%;
+}
 
 .tbn button:hover{
     background-color: #900750;
+    cursor: pointer;
 }
+
 
 footer{
     background-color: #FF1493;
@@ -122,37 +126,76 @@ footer{
 }
 
 
-@media screen and (max-width:1024px) {
-    .sobre-loja .flex{
-        display: grid;
+@media screen and (max-width: 640px) {
+    .img-column img {
+        width: 100%;
     }
 
-
-    .flex .produtos{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+    .txt-sobre h2{
+        padding-top: 20px;
     }
 
-    .conteudo{
-    max-width: 250px;
-    justify-content: center
+    .sobre-loja{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 50px;
+    }
+
+    .produtos{
+        display:grid;
+        grid-template-columns: auto;
+        margin: 50px;
+        max-width: 100%;
+    }
+
+        .interface > h2 {
+            margin: 50px;
+        }
+
+    .conteudo img {
+        width: 100%;
+    }
+
+    .tbn button{
+        width: 100%;
     }
 }
 
 
-
-@media screen and (max-width:767px) {
-    .sobre-loja .flex{
-        display: block;
+@media screen and (min-width: 641px) and (max-width:1023px){
+    .img-column img {
+        width: 100%;
     }
 
-    .flex .produtos{
-        display: block;
+    .Sobre-menu h1{
+        font-size: 40px;
     }
 
-    .logo-img img{
-        width: 20rem;
-        height: auto;
-        padding-bottom: 16px;
+    .sobre-loja {
+        grid-template-columns: subgrid;
+        margin: 45px;
+    }
+
+    .txt-sobre h2 {
+        padding-top: 15px;
+        font-size: 36px;
+    }
+
+    .produtos{
+        grid-template-columns: repeat(2, 1fr);
+        margin: 45px;
+    }
+
+    .interface > h2 {
+        margin: 45px;
+        font-size: 36px;
+    }
+
+    .conteudo img {
+        width: 100%;
+    }
+
+    .tbn button{
+        width: 100%;
     }
 }
