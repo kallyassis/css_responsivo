@@ -44,14 +44,17 @@ header{
 /* Estilo Cabeçalho */
 
 .img-column img {
-    width: 85%;
-    
+    width: 100%;
 }
 
 .sobre-loja{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 30px;
+}
+
+.txt-sobre {
+    padding-left: 30px;
 }
 
 .txt-sobre h2 {
@@ -82,8 +85,12 @@ header{
     margin: 30px;
     gap: 50px;
     flex-wrap: wrap;
+    
 }
 
+.conteudo img {
+    width: 200px;
+}
 
 .conteudo h3{
     padding-top: 8px;
@@ -126,19 +133,22 @@ footer{
 }
 
 
+
+
 @media screen and (max-width: 640px) {
-    .img-column img {
-        width: 100%;
+
+    .sobre-loja{
+        display: grid;
+        grid-template-columns: subgrid;
+        margin: 50px;
+    }
+
+    .txt-sobre {
+        padding-left: 0;
     }
 
     .txt-sobre h2{
         padding-top: 20px;
-    }
-
-    .sobre-loja{
-        display: grid;
-        grid-template-columns: auto;
-        margin: 50px;
     }
 
     .produtos{
@@ -163,10 +173,6 @@ footer{
 
 
 @media screen and (min-width: 641px) and (max-width:1023px){
-    .img-column img {
-        width: 100%;
-    }
-
     .Sobre-menu h1{
         font-size: 40px;
     }
@@ -179,6 +185,10 @@ footer{
     .txt-sobre h2 {
         padding-top: 15px;
         font-size: 36px;
+    }
+
+    .txt-sobre {
+        padding-left: 0;
     }
 
     .produtos{
